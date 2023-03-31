@@ -1,0 +1,14 @@
+
+body {
+    min-height: 100px;
+    max-width: 1300px;
+    background-color: rgb(238, 241, 240); 
+    margin: 0 auto;
+}
+header {
+  text-align: center;
+}
+
+h1 {
+  color: red;
+}

@@ -1,0 +1,13 @@
+
+body {
+    min-height: 100px;
+    max-width: 1300px;
+    background-color: rgb(238, 241, 240); 
+    margin: 0 auto;
+}
+p {
+  background: linear-gradient(to bottom, #00ff4c, #1e90ff);
+  margin: 20px;
+  padding: 14px;
+  border-radius: 20px;
+}

@@ -1,0 +1,14 @@
+
+body {
+    min-height: 100px;
+    max-width: 1300px;
+    background-color: rgb(238, 241, 240); 
+    margin: 0 auto;
+}
+.circle {
+  width: 250px;
+  height: 250px;
+  border: 10px double orange;
+  border-radius: 50%;
+  background-color: blue;
+}

@@ -1,0 +1,28 @@
+
+body {
+    min-height: 100px;
+    max-width: 1300px;
+    background-color: rgb(238, 241, 240); 
+    margin: 0 auto;
+}
+
+.parrafo{
+  background: rgb(54, 227, 239);
+  box-sizing: content-box;
+  width: 400px;
+  border-style: dashed; border-width: 4px;
+  padding: 150px;
+  display: inline-table;
+  text-align:center;
+ 
+}
+p{
+  background: rgb(13, 13, 205);
+  font-size: 20px;
+  margin: 50px;
+  padding: 40px;
+  font-family: "lucida sans";
+  text-transform: uppercase;
+}
+
+

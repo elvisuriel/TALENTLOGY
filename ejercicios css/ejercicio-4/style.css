@@ -1,0 +1,26 @@
+
+body {
+    min-height: 100px;
+    max-width: 1300px;
+    background-color: rgb(238, 241, 240); 
+    margin: 0 auto;
+}
+
+.columna{
+  background: rgb(54, 227, 239);
+  padding: 20px;
+  width: 25%;
+  margin: 10px;
+}
+.padre{
+  display: flex;
+}
+@media (max-width: 600px){
+  .padre {
+    
+    flex-direction: column;
+    
+  }
+
+
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <button class="nav-boton" onclick="accion()">Menú </button>
+        <a href="#perfil" class="nav-enlace desaparece">Perfil</a>
+        <a href="#proyectos" class="nav-enlace desaparece">Proyectos</a>
+        <a href="#documentos" class="nav-enlace desaparece">Documentos</a>
+        <a href="#contacto" class="nav-enlace desaparece">Contacto</a> 
+    </nav>
+  </header>
+  <main>
+    <section id="proyectos">
+      <h2>Mi Perfil</h2>
+      <div class="timeline">
+				<div class="tweet">
+					<img class="avatar" src="perfil.jpg" alt="Imagen de perfil">
+					<div class="content">
+						<div class="name">Elvis Marciales</div>
+						<div class="username" >3219918132</div>
+						<div class="timestamp">Cúcuta</div>
+						<div class="message">Este es mi Portafolio.</div>
+						
+					</div>
+				</div>
+    </section>
+  
+    <section id="proyectos">
+      
+      <h2>Mis Proyectos</h2>
+      <ul>
+        <li>
+          <h3>Proyecto 1</h3>
+          <p>Descripción del proyecto 1</p>
+          <a href="#">Ver proyecto</a>
+        </li>
+        <li>
+          <h3>Proyecto 2</h3>
+          <p>Descripción del proyecto 2</p>
+          <a href="#">Ver proyecto</a>
+        </li>
+        <li>
+          <h3>Proyecto 3</h3>
+          <p>Descripción del proyecto 3</p>
+          <a href="#">Ver proyecto</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="documentos">
+      <h2>Mis Documentos</h2>
+      <ul>
+        <li>
+          <h3>Documento 1</h3>
+          <p>Descripción del documento 1</p>
+          <a href="#">Ver documento</a>
+        </li>
+        <li>
+          <h3>Documento 2</h3>
+          <p>Descripción del documento 2</p>
+          <a href="#">Ver documento</a>
+        </li>
+        <li>
+          <h3>Documento 3</h3>
+          <p>Descripción del documento 3</p>
+          <a href="#">Ver documento</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form class="form" action="#">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje"></textarea>
+
+        <input type="submit" value="Enviar">
+      </form>
+    </section>
+  </main>
+
+ 
+<div class="footer">
+  <footer>
+    <p>Derechos Reservados &copy; 2023</p>
+  </footer>
+</div>
+
+
+  
+
+  
+
+  <script>
+function accion(){
+var ancla= document.getElementsByClassName("nav-enlace");
+for(var i = 0; i < ancla.length; i++)
+ ancla[i].classList.toggle("desaparece");
+}
+
+  </script>
+</body>
+</html>

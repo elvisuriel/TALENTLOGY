@@ -1,0 +1,20 @@
+
+body {
+    min-height: 100px;
+    max-width: 1300px;
+    background-color: rgb(238, 241, 240); 
+    margin: 0 auto;
+}
+button {
+  background-color: rgb(246, 29, 29);
+  color: white;
+  font-family: helvetica, sans-serif;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(26, 230, 26);
+}

@@ -1,0 +1,33 @@
+html {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.card {
+  box-shadow: 0 0 4px 4px #e6e6e6;
+  border-radius: 4px;
+  margin: 100px; 
+  width: 200px;
+ 
+}
+
+.card .title {
+  background-color: #8d8989;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 8px;
+  text-align: center;
+}
+
+.card .body {
+  font-style: italic;
+  padding: 8px;
+  text-align: justify;
+}
+
+.card .foot {
+  background-color: #f2f2f2;
+  color: #fff;
+  padding: 8px;
+  text-align: center;
+}

@@ -1,0 +1,186 @@
+body {
+	background-color: #c0eff7;
+	background-image: url("fondo.jpg");
+  }
+
+
+.nav-enlace{
+	display: inline-block;
+	background: linear-gradient(rgb(105, 181, 222), rgb(9, 131, 207));
+	color: #0a0a0a;
+	padding: 10px 30px;
+	text-decoration: none;
+	
+}
+.nav-enlace:hover{
+	background: #ddf2fb;
+}
+  nav  {
+	background: linear-gradient(rgb(48, 48, 220), rgb(34, 211, 227));
+	padding: 10px;
+	display: flex;
+	justify-content: space-around;
+  }
+  
+
+  main {
+	width: 1000px;
+	height: 700px;
+	margin: 0 auto;
+	padding: 10px;
+	display: flex;
+	
+  }
+  
+  section {
+	margin-bottom: 40px;
+	margin-right: 50px;
+  }
+
+  .tweet .avatar {
+	margin-right: 10px;
+	color: #1da1f2;
+	width: 100px;
+	height: 120px;
+
+}
+.tweet .avat{
+	width: 50px;
+	height: 40px;
+	
+}
+
+.tweet .content {
+	flex: 1;
+}
+
+.tweet .content .name {
+	font-weight: bold;
+	color: #fff;
+}
+
+.tweet .content .username {
+	color: #edf0f1;
+	margin-right: 5px;
+}
+
+.tweet .content .timestamp {
+	color: #f9fbfd;
+}
+
+.tweet .content .message {
+	margin-top: 5px;
+	color: #f3f5f6;
+	
+}
+
+
+
+  h1{
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+  }
+  h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+	font-family: cursive;
+  }
+  h3{
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+  }
+  a{
+	font-family: cursive;
+  }
+  p {
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+  }
+  
+  ul li {
+	margin-bottom: 1px;
+	width: 200px;
+	height: 170px;
+  }
+  
+  ul li a {
+	background-color: #eff2f2;
+	color: #390eb1;
+	padding: 2px 25px;
+	border-radius: 5px;
+	text-decoration: none;
+	
+  }
+  
+  ul li a:hover {
+	background-color: #2b09a4;
+	color: #fdfcfc;
+  }
+  
+  form {
+	display: flex;
+	flex-direction: column;
+	max-width: 600px;
+  }
+  
+  form label {
+	font-size: 18px;
+	margin-bottom: 10px;
+  }
+  
+  form input,
+  form textarea {
+	padding: 10px;
+	margin-bottom: 20px;
+	font-size: 18px;
+	border-radius: 5px;
+	border: none;
+  }
+  
+  form input[type="submit"] {
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+  form input[type="submit"]:hover {
+	background-color: #fff;
+	color: #333;
+  }
+.nav-boton{
+	background: #f7f9f8;
+	color: rgb(45, 126, 197);
+	padding: 10px 0;
+	border: 10px solid rgb(82, 198, 230);
+	display: none;
+	
+}
+
+  
+ @media (max-width: 600px){
+ nav {
+	background: #301abe;
+	flex-direction: column;
+ }
+
+ .nav-enlace{
+	margin: 10px 0;
+ }
+
+.nav-boton{
+	display: inline-block;
+}
+
+.desaparece{
+display: none;	
+}
+
+main{
+	flex-direction: column;
+	height: 2100px;
+}
+.form
+{
+width: 400px;
+height: 400px;
+}
+ }
