@@ -1,0 +1,292 @@
+
+body {
+	margin: 10px;
+	padding: 0;
+	font-family: Helvetica, sans-serif;
+      font-size: 16px;
+	background-color: hsl(0, 0%, 4%);
+	
+}
+
+head{
+	color: black;
+}
+
+button {
+    background-color: #f4f6f4; 
+    border: none;
+    color: rgb(9, 9, 9);
+    padding: 5px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Helvetica, sans-serif;
+      font-size: 16px;
+	border-radius: 10px;	
+	cursor: pointer;
+}
+
+.buton1{
+	margin: 20px;
+	padding: 5px;
+	cursor: pointer;
+    background-color: transparent;
+    height: 40px;
+    width: 250px;
+    color: #edf1f4;
+    font-size: 1.5em;
+	border: 1px solid rgb(250, 250, 250);
+}
+.buton2{
+	margin: 20px;
+	padding: 5px;
+	height: 40px;
+	width: 150px;
+	cursor: pointer;
+	font-size: 1.5em;
+	}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: black;
+	height: 50px;
+	
+	border-bottom: 1px solid #ebeef0;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	margin-right: 20px;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav .search-box {
+	flex: 1;
+	margin-left: 10px;
+  display: contents;
+}
+
+input {
+  margin: 10px;
+  padding: 12px 250px;
+  height: 5px;
+  border: 4px solid rgb(4, 120, 159);
+  border-radius: 40px 40px;
+}
+
+.input-wrapper {
+	position: relative;
+	width: 271px;
+	
+ }
+
+ .input-icon {
+	color: #5bd7ed;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+ }
+
+
+.hijo{
+  display: flex;
+  background: #26a4da;
+  margin-top: 100px;
+  height: 80px;
+  width: 100%;
+}
+
+.padre{
+  display: flex;
+  
+}
+h1{
+	color: #ebeef0;
+	font-family: Helvetica, sans-serif;
+    font-size: 24px;
+	height: 15px;
+	margin: 10px 20px;
+	
+}
+h3{
+	color: #edf0f1;
+	font-family: Helvetica, sans-serif;
+      font-size: 16px;
+}
+h5 {
+	color: #ebeef0;
+}
+
+.borde {
+  
+	border: 1px solid rgb(250, 250, 250);
+  
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+th {
+  background-color: #120392;
+  color: rgb(227, 221, 221);
+
+}
+td {
+	background-color: #1da1f2;
+}
+
+ 
+
+
+
+.tweet-box {
+	
+	padding: 2px;
+}
+
+.tweet-box form {
+	display: flex;
+	flex-direction: column;
+}
+
+
+.main {
+	margin: 0 auto;
+	max-width: 600px;
+}
+
+
+.tweet {
+	padding: 10px;
+	width: 300px;
+	display: flex;
+
+}
+
+.tweet .avatar {
+	margin-right: 10px;
+	color: #f2f4f2;
+	width: 100px;
+	height: 120px;
+	
+
+}
+.tweet .avat{
+	width: 30px;
+	height: 30px;
+	
+}
+
+.tweet .content {
+	flex: 1;
+}
+
+.tweet .content .name {
+	font-weight: bold;
+	color: #fff;
+}
+
+.tweet .content .username {
+	color: #edf0f1;
+	margin-right: 5px;
+}
+
+.tweet .content .timestamp {
+	color: #f9fbfd;
+}
+
+.tweet .content .message {
+	margin-top: 5px;
+	color: #f3f5f6;
+	
+}
+
+.tweet .actions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+	
+}
+
+.tweet .actions button {
+	background-color: transparent;
+	color: #f7f8f8;
+	border: none;
+	cursor: pointer;
+	
+}
+
+.tweet .actions button:hover {
+	text-decoration: underline;
+}
+
+.characters-left {
+	color: #f3f5f6;
+}
+
+@media screen and (max-width: 600px) {
+	nav {
+		flex-direction: column;
+		height: auto;
+	}
+	
+	nav ul {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	
+	nav .search-box {
+		margin-left: 0;
+		margin-top: 10px;
+	}
+	
+	nav .user-box {
+		margin-right: 0;
+		margin-top: 10px;
+	}
+	
+	.tweet-box textarea {
+		height: 120px;
+	}
+	.padre{
+		flex-direction: column;
+	}
+	.hijo{
+		margin-top: 2px;
+		flex-direction: column;
+		height: 240px;
+	}
+	.buton2{
+		padding: 2px;
+		width: 200px;
+	}
+	.input{
+		padding: 12px 90px;
+	}
+	.configurar{
+		margin-left: 600px;
+	}
+}
+
