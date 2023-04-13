@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Obtener Datos de Usuario</title>
+</head>
+<body>
+  <h1>Datos del Usuario</h1>
+  <p id="userData"></p>
+
+  <script>
+    // Función para obtener los datos de usuario simulando una llamada a una API externa
+    function getData() {
+      return new Promise((resolve, reject) => {
+        // Simulamos una llamada a una API externa con setTimeout
+        setTimeout(() => {
+          // Datos de ejemplo
+          const data = [
+            { id: 1, name: 'Usuario 1', age: 25 },
+            { id: 2, name: 'Usuario 2', age: 30 },
+            { id: 3, name: 'Usuario 3', age: 35 },
+          ];
+          resolve(data); // Resolvemos la promesa con los datos de ejemplo
+        }, 2000); // Simulamos un tiempo de espera de 2 segundo (2000 ms)
+      });
+    }
+
+    // Función para obtener los datos del usuario con un ID específico
+    function getUserData(userId) {
+      return new Promise((resolve, reject) => {
+        // Simulamos una llamada a una API externa con setTimeout
+        setTimeout(() => {
+          // Llamamos a la función getData para obtener los datos
+          getData()
+            .then(data => {
+              // Filtramos el objeto de datos para obtener el usuario con el ID específico
+              const user = data.find(user => user.id === userId);
+              if (user) {
+                resolve(user); // Resolvemos la promesa con los datos del usuario
+              } else {
+                reject(new Error(`No se encontró ningún usuario con ID: ${userId}`)); // Rechazamos la promesa con un error si no se encuentra el usuario
+              }
+            })
+            .catch(error => {
+              reject(error); // Rechazamos la promesa con el error obtenido de la función getData
+            });
+        }, 2000); // Simulamos un tiempo de espera de 2 segundos (2000 ms)
+      });
+    }
+
+    const userId = 1; // ID del usuario que deseas obtener
+
+    getUserData(userId)
+      .then(user => {
+        // Mostramos los datos del usuario en el elemento con ID 'userData'
+        document.getElementById('userData').textContent = JSON.stringify(user);
+      })
+      .catch(error => {
+        console.error('Ocurrió un error:', error);
+      });
+  </script>
+</body>
+</html>

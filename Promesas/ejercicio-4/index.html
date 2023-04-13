@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Example</title>
+</head>
+<body>
+  <h1>Login Example</h1>
+  <form id="loginForm">
+    <label for="username">Usuario:</label>
+    <input type="text" id="username" name="username">
+    <br>
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password">
+    <br>
+    <button type="submit">Iniciar sesión</button>
+  </form>
+  <p id="result"></p>
+  
+  <script>
+    // Función para simular una solicitud de inicio de sesión
+    function fakeLogin(username, password) {
+      // Credenciales válidas para este ejemplo
+      const validUsername = "usuario";
+      const validPassword = "contraseña";
+
+      // Devuelve una promesa que se resuelve después de 1 segundo
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (username === validUsername && password === validPassword) {
+            // Credenciales válidas, resuelve con true
+            resolve(true);
+          } else {
+            // Credenciales inválidas, resuelve con false
+            resolve(false);
+          }
+        }, 1000);
+      });
+    }
+
+    // Manejador de eventos para el formulario de inicio de sesión
+    document.getElementById("loginForm").addEventListener("submit", async (event) => {
+      event.preventDefault(); // Evita la recarga de la página
+
+      // Obtiene los valores de usuario y contraseña del formulario
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Llama a la función de inicio de sesión y espera el resultado
+      const result = await login(username, password);
+
+      // Actualiza el resultado en la página HTML
+      const resultElement = document.getElementById("result");
+      if (result) {
+        resultElement.textContent = "Inicio de sesión exitoso";
+      } else {
+        resultElement.textContent = "Credenciales inválidas";
+      }
+    });
+
+    // Función de inicio de sesión
+    function login(username, password) {
+      // Retorna la promesa de fakeLogin
+      return fakeLogin(username, password);
+    }
+  </script>
+</body>
+</html>

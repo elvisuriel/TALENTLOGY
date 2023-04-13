@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obtener Instrucciones de Navegación</title>
+</head>
+<body>
+    <h1>Obtener Instrucciones de Navegación</h1>
+    <button onclick="getDirections()">Obtener Instrucciones</button>
+    <p id="instructions"></p>
+
+    <script>
+        // Función para obtener las instrucciones de navegación
+        function getDirections() {
+            // Datos de origen y destino (simulados)
+            const origin = "Inicio";
+            const destination = "Destino";
+            
+            // Llamada a la función que devuelve una promesa
+            getDirectionsPromise(origin, destination)
+                .then(instructions => {
+                    // Mostrar las instrucciones en pantalla
+                    document.getElementById("instructions").innerText = instructions;
+                })
+                .catch(error => {
+                    // Manejar cualquier error ocurrido
+                    console.error("Error obteniendo las instrucciones:", error);
+                });
+        }
+
+        // Función que devuelve una promesa para obtener las instrucciones de navegación
+        function getDirectionsPromise(origin, destination) {
+            return new Promise((resolve, reject) => {
+                // Simulación de respuesta de API externa usando setTimeout
+                setTimeout(() => {
+                    const instructions = `Instrucciones para ir desde ${origin} hasta ${destination}`;
+                    resolve(instructions);
+                }, 2000); // Simulamos una demora de 2 segundos (2000 ms)
+            });
+        }
+    </script>
+</body>
+</html>

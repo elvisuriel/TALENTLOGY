@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Obtener Datos con Promesas</title>
+</head>
+<body>
+  <h1>Obtener Datos con Promesas</h1>
+  <button onclick="obtenerDatos()">Obtener Datos</button>
+  <p id="resultado"></p>
+
+  <script>
+    function getData() {
+      return new Promise((resolve, reject) => {
+        // Simulamos una llamada a una API externa con setTimeout
+        setTimeout(() => {
+          const data = {
+            id: 12,
+            nombre: "Elvis",
+            edad: 32
+          };
+          resolve(data); // Resolvemos la promesa con los datos
+        }, 3000); // Simulamos un tiempo de espera de 3 segundos (2000 ms)
+      });
+    }
+
+    function obtenerDatos() {
+      getData()
+        .then(data => {
+          const resultadoElement = document.getElementById('resultado');
+          resultadoElement.textContent = `Datos obtenidos: ${JSON.stringify(data)}`;
+        })
+        .catch(error => {
+          const resultadoElement = document.getElementById('resultado');
+          resultadoElement.textContent = `Ocurrió un error: ${error.message}`;
+        });
+    }
+  </script>
+</body>
+</html>

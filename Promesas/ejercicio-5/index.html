@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Get Users Example</title>
+</head>
+<body>
+  <h1>Get Users Example</h1>
+  <button id="getUsersButton">Obtener Usuarios</button>
+  <ul id="userList"></ul>
+  
+  <script>
+    // Función para simular la obtención de datos de usuarios
+    function getData() {
+      // Datos simulados de usuarios
+      const users = [
+        { id: 1, name: "Usuario 1" },
+        { id: 2, name: "Usuario 2" },
+        { id: 3, name: "Usuario 3" },
+        { id: 4, name: "Usuario 4" },
+        { id: 5, name: "Usuario 5" }
+      ];
+
+      // Devuelve una promesa que se resuelve después de 2 segundo
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(users);
+        }, 2000);
+      });
+    }
+
+    // Manejador de eventos para el botón de obtener usuarios
+    document.getElementById("getUsersButton").addEventListener("click", async () => {
+      // Llama a la función para obtener usuarios y espera el resultado
+      const users = await getUsers();
+
+      // Actualiza la lista de usuarios en la página HTML
+      const userListElement = document.getElementById("userList");
+      userListElement.innerHTML = ""; // Limpia la lista antes de actualizarla
+      users.forEach(user => {
+        const liElement = document.createElement("li");
+        liElement.textContent = `${user.id}: ${user.name}`;
+        userListElement.appendChild(liElement);
+      });
+    });
+
+    // Función para obtener usuarios
+    function getUsers() {
+      // Retorna la promesa de getData
+      return getData();
+    }
+  </script>
+</body>
+</html>

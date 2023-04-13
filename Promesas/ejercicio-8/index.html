@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Translation API Example</title>
+</head>
+<body>
+  <h1>Translation API Example</h1>
+  <label for="textInput">Ingrese un texto:</label>
+  <input type="text" id="textInput">
+  <label for="languageSelect">Idioma de destino:</label>
+  <select id="languageSelect">
+    <option value="en">Inglés</option>
+    <option value="es">Español</option>
+    <option value="fr">Francés</option>
+    <!-- Agregar más opciones de idiomas según tus necesidades -->
+  </select>
+  <button id="translateButton">Traducir</button>
+  <div id="translationResult"></div>
+  
+  <script>
+    // Función para simular la traducción de un texto
+    function translate(text, targetLanguage) {
+      // Simulación de obtención de datos de traducción de una API externa
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          // Objeto de traducción ficticia
+          const translationData = {
+            text: text,
+            targetLanguage: targetLanguage,
+            translatedText: `Texto traducido al ${targetLanguage}: ${text}`
+          };
+          resolve(translationData);
+        }, 2000);
+      });
+    }
+
+    // Manejador de eventos para el botón de traducción
+    document.getElementById("translateButton").addEventListener("click", async () => {
+      // Obtiene el valor del texto ingresado en el input de texto
+      const textInput = document.getElementById("textInput");
+      const text = textInput.value;
+
+      // Obtiene el valor del idioma de destino seleccionado en el select
+      const languageSelect = document.getElementById("languageSelect");
+      const targetLanguage = languageSelect.value;
+
+      // Verifica si se ingresó un texto y se seleccionó un idioma de destino
+      if (text && targetLanguage) {
+        try {
+          // Llama a la función para traducir el texto y espera los datos de traducción
+          const translationData = await translate(text, targetLanguage);
+
+          // Actualiza el resultado de la traducción en la página HTML
+          const translationResultElement = document.getElementById("translationResult");
+          translationResultElement.textContent = `Resultado de la traducción: ${translationData.translatedText}`;
+        } catch (error) {
+          console.error("Error al traducir el texto:", error);
+        }
+      } else {
+        console.error("Por favor ingrese un texto y seleccione un idioma de destino.");
+      }
+    });
+  </script>
+</body>
+</html>

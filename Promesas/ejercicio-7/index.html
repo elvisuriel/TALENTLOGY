@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather API Example</title>
+</head>
+<body>
+  <h1>Weather API Example</h1>
+  <label for="cityInput">Ingrese una ciudad:</label>
+  <input type="text" id="cityInput">
+  <button id="getWeatherButton">Obtener Clima</button>
+  <div id="weatherInfo"></div>
+  
+  <script>
+    // Función para simular obtener el clima de una ciudad
+    function getWeather(city) {
+      // Simulación de obtención de datos del clima de una API externa
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          // Objeto de tiempo actual ficticio para la ciudad especificada
+          const weatherData = {
+            city: city,
+            temperature: 25,
+            description: "Soleado"
+          };
+          resolve(weatherData);
+        }, 2000);
+      });
+    }
+
+    // Manejador de eventos para el botón de obtener clima
+    document.getElementById("getWeatherButton").addEventListener("click", async () => {
+      // Obtiene el valor de la ciudad ingresada en el input de texto
+      const cityInput = document.getElementById("cityInput");
+      const city = cityInput.value;
+
+      // Verifica si se ingresó una ciudad
+      if (city) {
+        try {
+          // Llama a la función para obtener el clima y espera los datos del clima
+          const weatherData = await getWeather(city);
+
+          // Actualiza la información del clima en la página HTML
+          const weatherInfoElement = document.getElementById("weatherInfo");
+          weatherInfoElement.innerHTML = `
+            <p>Ciudad: ${weatherData.city}</p>
+            <p>Temperatura: ${weatherData.temperature}°C</p>
+            <p>Descripción: ${weatherData.description}</p>
+          `;
+        } catch (error) {
+          console.error("Error al obtener el clima:", error);
+        }
+      } else {
+        console.error("Por favor ingrese una ciudad.");
+      }
+    });
+  </script>
+</body>
+</html>

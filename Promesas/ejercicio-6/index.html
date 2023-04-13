@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload File Example</title>
+</head>
+<body>
+  <h1>Upload File Example</h1>
+  <input type="file" id="fileInput">
+  <button id="uploadButton">Subir Archivo</button>
+  <p id="downloadLink"></p>
+  
+  <script>
+    // Función para simular la subida de un archivo
+    function uploadFile(fileName, filePromise) {
+      // Simulación de subida de archivo al servidor
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          // Genera una URL de descarga ficticia del archivo subido
+          const downloadUrl = `https://example.com/download/${fileName}`;
+          resolve(downloadUrl);
+        }, 2000);
+      });
+    }
+
+    // Manejador de eventos para el botón de subir archivo
+    document.getElementById("uploadButton").addEventListener("click", async () => {
+      // Obtiene el archivo seleccionado del input de tipo file
+      const fileInput = document.getElementById("fileInput");
+      const file = fileInput.files[0];
+
+      // Verifica si se seleccionó un archivo
+      if (file) {
+        // Crea una promesa para leer el archivo como un objeto Blob
+        const filePromise = new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onloadend = () => resolve(reader.result);
+          reader.onerror = reject;
+          reader.readAsArrayBuffer(file);
+        });
+
+        try {
+          // Llama a la función para subir el archivo y espera la URL de descarga
+          const downloadUrl = await uploadFile(file.name, filePromise);
+
+          // Actualiza el enlace de descarga en la página HTML
+          const downloadLinkElement = document.getElementById("downloadLink");
+          downloadLinkElement.innerHTML = `<a href="${downloadUrl}" target="_blank">Descargar Archivo</a>`;
+        } catch (error) {
+          console.error("Error al subir archivo:", error);
+        }
+      } else {
+        console.error("No se ha seleccionado ningún archivo.");
+      }
+    });
+  </script>
+</body>
+</html>

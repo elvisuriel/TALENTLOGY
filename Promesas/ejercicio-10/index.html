@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obtener Información del Usuario</title>
+</head>
+<body>
+    <h1>Obtener Información del Usuario</h1>
+    <button onclick="getUserInfo(1)">Obtener Información</button>
+    <div id="user-info"></div>
+
+    <script>
+        // Función para obtener la información del usuario
+        function getUserInfo(userId) {
+            // Llamada a la función que devuelve una promesa
+            getUserData(userId)
+                .then(userData => {
+                    // Obtener la fecha de nacimiento del usuario
+                    const birthDate = new Date(userData.birthDate);
+                    // Llamada a la función que devuelve una promesa
+                    return getUserAge(birthDate)
+                        .then(age => {
+                            // Llamada a la función que devuelve una promesa
+                            return getUserTweets(userData.username)
+                                .then(tweets => {
+                                    // Crear objeto con la información del usuario
+                                    const userInfo = {
+                                        Nombre: userData.name,
+                                        Correo: userData.email,
+                                        Edad: age,
+                                        Ciudad: userData.city,
+                                        Tweets: tweets
+                                    };
+                                    // Mostrar la información del usuario en pantalla
+                                    const userInfoElement = document.getElementById("user-info");
+                                    userInfoElement.innerHTML = `
+                                        <strong>Información del Usuario:</strong><br>
+                                        Nombre: ${userInfo.Nombre}<br>
+                                        Correo: ${userInfo.Correo}<br>
+                                        Edad: ${userInfo.Edad} años<br>
+                                        Ciudad: ${userInfo.Ciudad}<br>
+                                        Tweets:<br>
+                                        <ul>
+                                            ${userInfo.Tweets.map(tweet => `<li>${tweet}</li>`).join("")}
+                                        </ul>
+                                    `;
+                                });
+                        });
+                })
+                .catch(error => {
+                    // Manejar cualquier error ocurrido
+                    console.error("Error obteniendo la información del usuario:", error);
+                });
+        }
+
+        // Función que devuelve una promesa para obtener los datos del usuario
+        function getUserData(userId) {
+            return new Promise((resolve, reject) => {
+                // Simulación de respuesta de API externa usando setTimeout
+                setTimeout(() => {
+                    // Datos simulados del usuario
+                    const userData = {
+                        name: "John Doe",
+                        email: "johndoe@example.com",
+                        birthDate: "1990-01-01",
+                        city: "New York",
+                        username: "johndoe123"
+                    };
+                    resolve(userData);
+                }, 2000); // Simulamos una demora de 2 segundos (2000 ms)
+            });
+        }
+
+        // Función que devuelve una promesa para obtener los tweets del usuario
+        function getUserTweets(username) {
+            return new Promise((resolve, reject) => {
+                // Simulación de respuesta de API externa usando setTimeout
+                setTimeout(() => {
+                    // Tweets simulados del usuario
+                    const tweets = [
+                        "Tweet 1",
+                        "Tweet 2",
+                        "Tweet 3",
+                        "Tweet 4",
+                        "Tweet 5"
+                    ];
+                    resolve(tweets);
+                }, 1500); // Simulamos una demora de 1.5 segundos (1500 ms)
+            });
+        }
+
+        // Función que devuelve una promesa para obtener la edad del usuario
+        function getUserAge(birthDate) {
+            return new Promise((resolve, reject) => {
+                // Obtener fecha actual
+                const currentDate = new Date();
+                // Calcular la edad del usuario
+                const age = currentDate.getFullYear() - birthDate.getFullYear();
+                resolve(age);
+            });
+        }
+    </script>
+</body>
+</html>
