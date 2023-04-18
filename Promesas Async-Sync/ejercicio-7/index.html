@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Resolver Promesa con Parámetro</title>
+  </head>
+  <body>
+    <script>
+
+function comparar(a, b) {
+  return new Promise((resolve, reject) => {
+    if (a > b) {
+      resolve('a es mayor que b');
+    } else if (b > a) {
+      resolve('b es mayor que a');
+    } else {
+      reject('a y b son iguales');
+    }
+  });
+}
+
+comparar(5, 10)
+  .then(resultado => console.log(resultado))
+  .catch(error => console.error(error)); // "b es mayor que a"
+
+comparar(10, 5)
+  .then(resultado => console.log(resultado))
+  .catch(error => console.error(error)); // "a es mayor que b"
+
+comparar(5, 5)
+  .then(resultado => console.log(resultado))
+  .catch(error => console.error(error)); // "a y b son iguales"
+
+    </script>
+     
+     
+  </body>
+</html>

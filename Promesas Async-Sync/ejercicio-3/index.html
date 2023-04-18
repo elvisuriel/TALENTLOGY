@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Resolver Promesa con Parámetro</title>
+  </head>
+  <body>
+    <script>
+
+function obtenerInformacion(id) {
+  return new Promise((resolve, reject) => {
+    // Hacer llamada a la API externa para obtener información del usuario con el id especificado
+    fetch(`https://api.example.com/usuarios/${id}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("La llamada a la API falló");
+        }
+        return response.json();
+      })
+      .then(data => {
+        resolve(data);
+      })
+      .catch(error => {
+        reject(error.message);
+      });
+  });
+}
+
+
+
+    </script>
+     
+     
+  </body>
+</html>

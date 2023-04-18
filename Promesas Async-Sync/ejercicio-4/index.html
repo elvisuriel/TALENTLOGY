@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Resolver Promesa con Parámetro</title>
+  </head>
+  <body>
+    <script>
+
+function calcular(a, b, operacion) {
+  return new Promise((resolve, reject) => {
+    switch (operacion) {
+      case 'suma':
+        resolve(a + b);
+        break;
+      case 'resta':
+        resolve(a - b);
+        break;
+      case 'multiplicacion':
+        resolve(a * b);
+        break;
+      case 'division':
+        resolve(a / b);
+        break;
+      default:
+        reject('Error: Operacion invalida');
+    }
+  });
+}
+calcular(10, 5, 'suma')
+  .then(resultado => console.log(resultado))
+  .catch(error => console.error(error));
+
+calcular(10, 5, 'resta')
+  .then(resultado => console.log(resultado))
+  .catch(error => console.error(error));
+
+calcular(10, 5, 'multiplicacion')
+  .then(resultado => console.log(resultado))
+  .catch(error => console.error(error));
+
+calcular(10, 5, 'division')
+  .then(resultado => console.log(resultado))
+  .catch(error => console.error(error));
+
+calcular(10, 5, 'potencia')
+  .then(resultado => console.log(resultado))
+  .catch(error => console.error(error));
+
+
+    </script>
+     
+     
+  </body>
+</html>

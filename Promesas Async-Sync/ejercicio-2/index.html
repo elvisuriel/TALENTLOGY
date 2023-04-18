@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Resolver Promesa con Parámetro</title>
+  </head>
+  <body>
+    <h1>Resolver Promesa con Parámetro</h1>
+    <button onclick="resolver(true)">Resolver Promesa</button>
+    <button onclick="resolver(false)">Rechazar Promesa</button>
+    <script>
+      function resolver(resuelve) {
+        resolverPromesa(resuelve)
+          .then(resultado => {
+            alert(resultado);
+          })
+          .catch(error => {
+            alert(error);
+          });
+      }
+      
+      function resolverPromesa(resuelve) {
+        return new Promise((resolve, reject) => {
+          if (resuelve) {
+            resolve("La promesa fue resuelta");
+          } else {
+            reject("La promesa fue rechazada");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

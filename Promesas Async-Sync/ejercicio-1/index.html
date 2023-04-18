@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Esperar segundos con Promesas</title>
+  </head>
+  <body>
+    <h1>Esperar segundos con Promesas</h1>
+    <button onclick="esperar()">Esperar 5 segundos</button>
+    <script>
+      function esperar() {
+        esperarSegundos(5)
+          .then(() => {
+            alert("Han pasado 5 segundos");
+          });
+      }
+      
+      function esperarSegundos(segundos) {
+        return new Promise(resolve => {
+          setTimeout(() => {
+            resolve();
+          }, segundos * 1000);
+        });
+      }
+    </script>
+  </body>
+</html>

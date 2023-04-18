@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Resolver Promesa con Parámetro</title>
+  </head>
+  <body>
+    <script>
+function tamanioTotalRespuestas(urls) {
+  return Promise.all(urls.map(url => fetch(url)))
+    .then(responses => {
+      return responses.reduce((sum, response) => {
+        return sum + response.headers.get('content-length');
+      }, 0);
+    });
+}
+
+
+const urls = ['https://jsonplaceholder.typicode.com/posts/1', 'https://jsonplaceholder.typicode.com/posts/2'];
+
+tamanioTotalRespuestas(urls)
+  .then(size => console.log(`The total size of the responses is ${size} bytes.`))
+  .catch(error => console.error(error));
+    </script>
+     
+     
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Resolver Promesa con Parámetro</title>
+  </head>
+  <body>
+    <script>
+function cuadradosNumeros(numeros) {
+  return new Promise((resolve, reject) => {
+    if (numeros.length === 0) {
+      reject(new Error('La lista de numeros esta vacia.'));
+    } else {
+      const cuadrados = numeros.map(numero => ({
+        number: numero,
+        square: numero * numero
+      }));
+      resolve(cuadrados);
+    }
+  });
+}
+
+const numeros = [1, 2, 3, 4, 5];
+
+cuadradosNumeros(numeros)
+   .then(cuadrados => console.log(cuadrados))
+   .catch(error => console.error(error));
+
+    </script>
+     
+     
+  </body>
+</html>
