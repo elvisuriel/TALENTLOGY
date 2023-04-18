@@ -1,0 +1,534 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(0, 100%, 1%);
+}
+
+li {
+  list-style: none;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #adb5bd;
+  border-radius: 5px;
+}
+
+
+
+.main {
+    width: 100%;
+    display: flex;
+  }
+  
+  
+  .main-twitter {
+    width: 30%;
+    height: 100vh;
+    border-right: 1px solid gray;
+    display: flex;
+    justify-content: end;
+  }
+  
+  .main-container-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #e7e9ea;
+    padding-top: 10px;
+    padding-right: 100px;
+  }
+  
+  .main-twitter .bi-twitter,
+  .main-twitter .bi-hash,
+  .main-twitter .bi-gear {
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  .container-left-explorar {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 5px 10px;
+  }
+  
+  .container-left-home {
+    padding: 5px 10px;
+  }
+  
+  .container-left-home:hover {
+    background-color: rgb(32, 35, 39);
+    cursor: pointer;
+    width: max-content;
+    border-radius: 20px;
+  }
+  
+  .container-left-explorar:hover {
+    background-color: rgb(32, 35, 39);
+    cursor: pointer;
+    width: max-content;
+    border-radius: 20px;
+  }
+  
+  .container-left-explorar p {
+    font-size: 20px;
+  }
+  
+  .container-left-config {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 5px 10px;
+  }
+  
+  .container-left-config:hover {
+    background-color: rgb(32, 35, 39);
+    cursor: pointer;
+    width: max-content;
+    border-radius: 20px;
+  }
+  
+  .container-left-config p {
+    font-size: 20px;
+  }
+  
+  
+  .contenedor-principal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    color: white;
+  }
+  
+  .contenedor-hijo {
+    width: 60%;
+    border-right: 1px solid gray;
+  }
+  
+  .right-search-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 5px 20px 0 20px;
+  }
+  
+  .search-input {
+    color: #71767b;
+    background-color: rgb(32, 35, 39);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 20px;
+  }
+  
+  /* 
+  .search-input:focus {
+    border: 1px solid blue;
+    border-color: blue;
+    background-color: black;
+  } */
+  
+  .search-input input {
+    border: none;
+    background: none;
+  }
+  
+  .search-input input:focus {
+    outline: none;
+  }
+  
+  
+  
+  .right-container-menu {
+    margin-top: 3px;
+    border-bottom: 1px solid gray;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 0px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu-item {
+    color: #71767b;
+    padding: 15px;
+  }
+  
+  .menu-item:first-child {
+    color: white;
+    background-color: rgb(32, 35, 39);
+    border-bottom: 3px solid rgb(29, 155, 240);
+    font-weight: 600;
+  }
+  
+  .menu-item:hover {
+    background-color: rgb(32, 35, 39);
+    cursor: pointer;
+  }
+  
+
+  .mundial-container {
+    padding: 15px;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  
+  .mundial-first-section {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+  }
+  
+  .first-p {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .second-p {
+    display: flex;
+    gap: 2px;
+  }
+  
+  .second-p-1 {
+    color: #71767b;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .point {
+    color: #71767b;
+    font-size: 13px;
+  }
+  
+  .second-p-2 {
+    color: #ef217e;
+    font-size: 13px;
+  }
+  
+
+
+  .mundial {
+    margin-top: 5px;
+  }
+  
+  .Japon {
+    background: #044fe7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  
+  .Japon span {
+    font-size: 23px;
+    font-weight: 600;
+  }
+  
+  .Japon-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .Japon-title p {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .Croacia {
+    background: #4787ed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  
+  .Croacia span {
+    font-size: 23px;
+    font-weight: 600;
+  }
+  
+  .Croacia-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .golden-state-title p {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .section {
+    margin-top: 15px;
+  }
+  
+  .tweet {
+    padding: 5px;
+  }
+  
+  .tweet:hover {
+    background-color: rgb(32, 35, 39);
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .tweet-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #71767b;
+    font-size: 13px;
+  }
+  
+  .tweet-header i {
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .tweet-header i:hover {
+    background-color: rgba(29, 155, 240, 0.2);
+    border-radius: 100%;
+    color: rgb(29, 155, 240);
+  }
+  
+  .tweet-categorie {
+    margin: 5px 0px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .cantidad-tweets {
+    color: #71767b;
+    font-size: 13px;
+  }
+  
+  
+
+
+
+  
+  .second-section-right-twitter {
+    width: 40%;
+  }
+  
+  .card-cuenta-twitter {
+    max-width: 350px;
+    border: 1px solid gray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    color: #e7e9ea;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    font-size: 13px;
+    color: #71767b;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .button {
+    height: 40px;
+    background-color: white;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 20px;
+    padding: 0px 16px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    cursor: pointer;
+    background-color: #e9ecef;
+  }
+  
+  .button .icon-google {
+    width: 15px;
+  }
+  
+  .button .icon-apple {
+    width: 15px;
+  }
+  
+  .politicas {
+    width: 350px;
+    color: #71767b;
+    font-size: 13px;
+  }
+  
+  .terminos {
+    color: #71767b;
+    font-size: 13px;
+  }
+  
+  .terminos .link {
+    color: rgb(29, 155, 240);
+    font-size: 13px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .terminos .link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  
+  footer {
+    background-color: rgb(29, 155, 240);
+    position: fixed;
+    bottom: 0;
+    height: 70px;
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .firts-container-footer p {
+    padding-right: 200px;
+    font-size: 23px;
+    font-weight: 600;
+    color: white;
+    
+
+  }
+  
+  .firts-container-footer span {
+    font-size: 15px;
+    color: white;
+  }
+  
+  .second-container-footer .btn-1{
+      background-color: rgb(29, 155, 240);
+      color: white;
+      border: 1px solid white;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 20px;
+      transition: all 0.3s ease-in-out;
+  }
+  
+  .second-container-footer .btn-1:hover{
+      cursor: pointer;
+      background-color: rgba(255, 255, 255,0.2);
+  }
+  
+  .second-container-footer .btn-2{
+      background-color: white;
+      color: black;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border: 1px solid white;
+      border-radius: 20px;
+      transition: all 0.3s ease-in-out;
+  }
+  
+  .second-container-footer .btn-2:hover{
+      cursor: pointer;
+      background-color: #e9ecef;
+  }
+
+
+
+  
+@media screen and (max-width: 600px) {
+	
+
+  .main{
+		flex-direction: column;
+    height: 1900px;
+	}
+  
+  .contenedor-principal{
+    flex-direction: column;
+  }
+  
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu-item {
+    color: #71767b;
+    padding: 10px;  
+  }
+
+  .main-twitter {
+    width: 100%;
+    height: 25vh;
+    border-right: none;
+    justify-content: center;
+  }
+
+  .contenedor-hijo {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .second-section-right-twitter {
+    width: 300px;
+    margin: 100px;
+   
+}
+
+footer{
+  height: 130px;
+  padding: 10px 10px;
+  width: 100%;
+  flex-direction: column;
+}
+  .firts-container-footer p {
+    padding-right: 100px;
+    padding: 10px 10px;
+}
+}
