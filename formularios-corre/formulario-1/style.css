@@ -1,0 +1,15 @@
+.note-card {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(236, 242, 245, 0.742);
+    
+}
+button{
+    background-color: rgb(95, 123, 250);
+    border-radius: 25px;
+    color: azure;
+}
+button:hover{
+    background:rgb(19, 37, 229);
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notas</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"/>
+     <link rel="stylesheet" href="style.css">
+	 
+</head>
+<body>
+	<nav class="navbar navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">Notas</a>
+	  </nav>
+  
+
+	  <div class="container">
+		<!-- APPLICATION -->
+		<div id="App" class="row pt-5">
+		  <!-- FORM -->
+		  <div class="col-md-4">
+			<div class="card">
+			  <div class="card-header">
+				<h4>Agregar Nota </h4>
+			  </div>
+			  <form id="note-form" class="card-body">
+				<div class="form-group">
+					<label for="title">Título:</label>
+					<input type="text" id="title" required 
+					class="form-control"
+					placeholder="Valor nota"
+					>	
+				</div>
+				<div class="form-group">
+					<label for="body">Cuerpo:</label>
+					<br>
+					<textarea id="body" required></textarea>
+						
+				</div>
+				<button type="submit" class="btn btn-primary btn-block">Agregar nota</button>
+				
+			  </form>
+			</div>
+		  </div>
+  
+		  <!-- PRODUCTS LIST -->
+		  <div id="note-list" class="col-md-4">
+			
+			<script>
+				// Obtener las notas almacenadas en el localStorage (si hay alguna)
+				let notes = JSON.parse(localStorage.getItem("notes")) || [];
+		
+				// Función para mostrar las notas en la página
+				function renderNotes() {
+					let noteList = document.getElementById("note-list");
+					noteList.innerHTML = "";
+		
+					for (let i = 0; i < notes.length; i++) {
+						let note = notes[i];
+		
+						// Crear una tarjeta para la nota
+						let card = document.createElement("div");
+						card.classList.add("note-card");
+		
+						// Agregar el título de la nota a la tarjeta
+						let titleElement = document.createElement("h3");
+						titleElement.textContent = note.title;
+						card.appendChild(titleElement);
+		
+						// Agregar el cuerpo de la nota a la tarjeta
+						let bodyElement = document.createElement("p");
+						bodyElement.textContent = note.body;
+						card.appendChild(bodyElement);
+		
+						// Agregar el botón para eliminar la nota
+						let deleteButton = document.createElement("button");
+						deleteButton.textContent = "Eliminar" ;
+						deleteButton.addEventListener("click", function() {
+							notes.splice(i, 1);
+							localStorage.setItem("notes", JSON.stringify(notes));
+							renderNotes();
+						alert("Nota eliminada satisfactotiamente" )	
+						});
+						card.appendChild(deleteButton) ;
+		                
+						// Agregar la tarjeta a la lista de notas
+						noteList.appendChild(card);
+						
+					}
+				}
+				// Mostrar las notas almacenadas en el localStorage
+				renderNotes();
+		
+				// Agregar una nueva nota cuando se envíe el formulario
+				let noteForm = document.getElementById("note-form");
+				noteForm.addEventListener("submit", function(event) {
+					event.preventDefault();
+		
+					// Obtener el título y el cuerpo de la nota
+					let title = document.getElementById("title").value;
+					let body = document.getElementById("body").value;
+		
+					// Crear un objeto para representar la nota
+					let note = {
+						title: title,
+						body: body
+					};
+		
+					// Agregar la nota al array de notas y al localStorage
+					notes.push(note);
+					localStorage.setItem("notes", JSON.stringify(notes));
+		
+					// Limpiar el formulario y volver a mostrar las notas
+					noteForm.reset();
+					renderNotes();
+				});
+
+
+
+			</script>
+        
+    </div>
+	
+
+	<!-- Sección para mostrar notas -->
+
+</body>
+</html>

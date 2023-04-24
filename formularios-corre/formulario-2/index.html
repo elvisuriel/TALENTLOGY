@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Tareas</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Tareas</h1>
+    </header>
+    <main>
+      <section class="pending">
+        <h2>Pendiente</h2>
+        <ul class="task-list"></ul>
+      </section>
+      <section class="in-progress">
+        <h2>En Progreso</h2>
+        <ul class="task-list"></ul>
+      </section>
+      <section class="completed">
+        <h2>Completado</h2>
+        <ul class="task-list"></ul>
+      </section>
+      <section class="add-task">
+        <h2>Agregar Tarea</h2>
+        <form>
+          <label for="title">Título:</label>
+          <input type="text" id="title" name="title" required>
+          <label for="description">Descripción:</label>
+          <textarea id="description" name="description"></textarea>
+          <label for="due-date">Fecha de Vencimiento:</label>
+          <input type="date" id="due-date" name="due-date" required>
+          <button type="submit">Agregar</button>
+        </form>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
