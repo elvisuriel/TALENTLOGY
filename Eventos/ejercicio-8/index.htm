@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Evento mouseover en una imagen</title>
+	<style>
+		#descripcion {
+			display: none;
+			position: absolute;
+			background-color: #fff;
+			padding: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+		}
+	</style>
+</head>
+<body>
+	<h1>Evento mouseover en una imagen</h1>
+	<p>Pasa el mouse sobre la imagen para ver la descripción:</p>
+	<img id="imagen" src="OIP.jpg" alt="Imagen">
+	<div id="descripcion"></div>
+	<script>
+		var imagen = document.getElementById("imagen");
+		var descripcion = document.getElementById("descripcion");
+
+		imagen.addEventListener("mouseover", function() {
+			descripcion.innerHTML = "Esta es una imagen de I.A";
+			descripcion.style.display = "block";
+		});
+
+		imagen.addEventListener("mouseout", function() {
+			descripcion.style.display = "none";
+		});
+	</script>
+</body>
+</html>

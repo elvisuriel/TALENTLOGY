@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Evento change en un select</title>
+	<style>
+		
+select {
+  margin: 20px;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+#valor {
+  margin: 20px;
+  padding: 10px;
+  font-size: 24px;
+  background-color: #43b2f3;
+  border: 2px solid #040101;
+  border-radius: 5px;
+  text-align: center;
+  color: #333;
+}
+	</style>
+</head>
+<body>
+	<h1>Evento change en un select</h1>
+	<p>Selecciona una opción del siguiente menú:</p>
+	<select id="select">
+		<option value="opcion1">Opción 1</option>
+		<option value="opcion2">Opción 2</option>
+		<option value="opcion3">Opción 3</option>
+	</select>
+	<div id="valor"></div>
+	<script>
+		var select = document.getElementById("select");
+		var valor = document.getElementById("valor");
+
+		select.addEventListener("change", function() {
+			valor.innerHTML = "El valor seleccionado es: " + select.value;
+		});
+	</script>
+</body>
+</html>

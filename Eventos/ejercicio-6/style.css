@@ -1,0 +1,19 @@
+ul {
+	list-style: none;
+	padding: 0;
+  }
+  
+  li {
+	background-color: #f8f9fa;
+	border: 1px solid #dee2e6;
+	border-radius: 5px;
+	padding: 1rem;
+	margin-bottom: 0.5rem;
+	cursor: pointer;
+  }
+  
+  .activo {
+	background-color: #007bff;
+	color: white;
+  }
+  

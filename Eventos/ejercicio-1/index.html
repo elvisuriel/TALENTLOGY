@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Evento click en botón</title>
+	<style>
+		button {
+			background-color: #007bff;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			padding: 0.5rem 1rem;
+			cursor: pointer;
+			font-size: 1.2rem;
+			margin-right: 1rem;
+		}
+
+		button:hover {
+			background-color: #0062cc;
+		}
+
+		#mensaje {
+			font-size: 1.5rem;
+			margin-top: 1rem;
+		}
+	</style>
+</head>
+<body>
+	<button id="boton">Haz clic aquí</button>
+	<div id="mensaje"></div>
+
+	<script>
+		const boton = document.getElementById('boton');
+		const mensaje = document.getElementById('mensaje');
+
+		boton.addEventListener('click', () => {
+			mensaje.textContent = '¡Has hecho clic en el botón!';
+		});
+	</script>
+</body>
+</html>

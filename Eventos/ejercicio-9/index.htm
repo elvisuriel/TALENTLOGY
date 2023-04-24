@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Evento click en un botón con confirmación</title>
+	<style>
+		#eliminar {
+			margin: 20px;
+			padding: 20px;
+			background-color: #45a4ed;
+			border: 1px solid #28036c;
+		}
+	</style>
+</head>
+<body>
+	<h1>Evento click en un botón con confirmación</h1>
+	<p>Haz clic en el botón para eliminar el elemento:</p>
+	<button id="boton">Eliminar elemento</button>
+	<div id="eliminar">
+		<p>Este es el elemento que será eliminado.</p>
+	</div>
+	<script>
+		const boton = document.getElementById("boton");
+		const eliminar = document.getElementById("eliminar");
+
+		boton.addEventListener("click", function() {
+			if (confirm("¿Estás seguro de que deseas eliminar este elemento?")) {
+				eliminar.parentNode.removeChild(eliminar);
+			}
+		});
+	</script>
+</body>
+</html>

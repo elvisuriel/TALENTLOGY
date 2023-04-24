@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Evento dragstart y drop en una imagen</title>
+	<style>
+		#mensaje {
+			margin: 20px;
+			padding: 10px;
+			background-color: #eee;
+			border: 1px solid #ccc;
+		}
+
+		#contenedor {
+			margin: 20px;
+			padding: 10px;
+			background-color: #f0f0f0;
+			border: 1px solid #ccc;
+			min-height: 150px;
+			text-align: center;
+		}
+
+		#contenedor.puede-soltar {
+			background-color: #cfc;
+			border-color: #6c6;
+		}
+
+		#contenedor.puede-soltar #mensaje {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>Evento dragstart y drop en una imagen</h1>
+	<p>Arrastra la imagen a la derecha:</p>
+	<img id="imagen" src="OIP.jpg" draggable="true" width="150">
+	<div id="mensaje">Suelta la imagen aquí</div>
+	<div id="contenedor">
+		Arrastra y suelta la imagen aquí
+	</div>
+	<script>
+		const mensaje = document.getElementById("mensaje");
+		const contenedor = document.getElementById("contenedor");
+
+		document.getElementById("imagen").addEventListener("dragstart", function() {
+			mensaje.innerHTML = "Estás arrastrando la imagen...";
+		});
+
+		contenedor.addEventListener("dragover", function(event) {
+			event.preventDefault();
+			contenedor.classList.add("puede-soltar");
+			mensaje.innerHTML = "Suelta la imagen aquí";
+		});
+
+		contenedor.addEventListener("dragleave", function() {
+			contenedor.classList.remove("puede-soltar");
+			mensaje.innerHTML = "Arrastra la imagen para ver el mensaje";
+		});
+
+		contenedor.addEventListener("drop", function(event) {
+			event.preventDefault();
+			var imagen = document.createElement("img");
+			imagen.src = event.dataTransfer.getData("text/plain");
+			contenedor.appendChild(imagen);
+			mensaje.innerHTML = "Imagen insertada correctamente";
+			contenedor.classList.remove("puede-soltar");
+		});
+	</script>
+</body>
+</html>
