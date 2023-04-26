@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cambio de color de fondo al pasar el mouse y agregar marcas aleatorias</title>
+  <style>
+    body {
+      background-color: #d1eaf4;
+      height: 100vh;
+    }
+
+    #pincel {
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background-color: blue;
+      pointer-events: none;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var pincel = document.getElementById("pincel"); // Obtén la referencia al elemento que representa el pincel
+
+      document.addEventListener("mousemove", function(event) {
+        pincel.style.left = (event.clientX - 10) + "px"; // Actualiza la posición del pincel
+        pincel.style.top = (event.clientY - 10) + "px";
+        document.querySelector("body").style.cursor = "none"; // Oculta el cursor
+
+        var marca = document.createElement("div"); // Crea el elemento que representa la marca de color aleatorio
+        marca.style.height = "10px";
+        marca.style.width = "10px";
+        marca.style.borderRadius = "50%";
+        marca.style.backgroundColor = "blue";
+        marca.style.position = "absolute";
+        marca.style.left = (event.clientX - 5) + "px"; // Coloca la marca en la posición del mouse
+        marca.style.top = (event.clientY - 5) + "px";
+        document.body.appendChild(marca); // Agrega la marca al body
+
+        
+      });
+
+      
+    });
+  </script>
+</head>
+<body>
+  <div id="pincel"></div>
+</body>
+</html>
