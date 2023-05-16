@@ -1,7 +1,7 @@
 html, body {
   min-height: 100%;
 }
-body { background-color: rgb(173, 199, 225); }
+body { background-color: rgb(107, 193, 246); }
 .tabla-productos {
     border-collapse: collapse;
     margin: 0 auto;
@@ -25,7 +25,7 @@ body { background-color: rgb(173, 199, 225); }
   }
 
   .boton {
-    background-color: #007bff;
+    background-color: #47ddf4;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
@@ -34,7 +34,7 @@ body { background-color: rgb(173, 199, 225); }
   }
   
   .boton:hover {
-    background-color: #0069d9;
+    background-color: #8579f7;
   }
 
 
@@ -81,7 +81,7 @@ body { background-color: rgb(173, 199, 225); }
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    background-color: #007bff;
+    background-color: #f3f6f9;
     padding: 1em;
     box-shadow: 2px 2px 10px lightgray;
   }
@@ -94,5 +94,56 @@ body { background-color: rgb(173, 199, 225); }
   a{
     text-decoration: none;
   }
+  .my-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
   
+  .my-table th,
+  .my-table td {
+    padding: 8px;
+    border: 2px solid #080808;
+  }
   
+  .my-table thead {
+    background-color: #f2f2f2;
+  }
+  
+  .my-table th {
+    font-weight: bold;
+  }
+  
+  .my-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .my-table tbody tr:hover {
+    background-color: #e6e6e6;
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-container input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .search-container select {
+    margin-left: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-container select:focus {
+    outline: none;
+    border-color: #007bff;
+  }

@@ -11,6 +11,9 @@ import Ejercicio10 from './ejercicios/ejercicio10/pages/Ejercicio10'
 import Ejercicio11 from './ejercicios/ejercicio11/pages/Ejercicio11'
 import Ejercicio12 from './ejercicios/ejercicio12/pages/Ejercicio12'
 import Ejercicio13 from './ejercicios/ejercicio13/pages/Ejercicio13'
+import Ejercicio14 from './ejercicios/ejercicio14/pages/Ejercicio14'
+import Ejercicio15 from './ejercicios/ejercicio15/pages/Ejercicio15'
+import Ejercicio16 from './ejercicios/ejercicio16/pages/Ejercicio16'
 import './index.css'
 import './carrito.css'
 import { BrowserRouter, Routes, Route,Link } from 'react-router-dom'
@@ -37,6 +40,9 @@ const App = () => {
               <Route path='/Ejercicio11' element={<Ejercicio11/>}/>
               <Route path='/Ejercicio12' element={<Ejercicio12/>}/>
               <Route path='/Ejercicio13' element={<Ejercicio13/>}/>
+              <Route path='/Ejercicio14' element={<Ejercicio14/>}/>
+              <Route path='/Ejercicio15' element={<Ejercicio15/>}/>
+              <Route path='/Ejercicio16' element={<Ejercicio16/>}/>
             </Routes>
            </div>
  )
@@ -83,6 +89,15 @@ function Navigation(){
         </li>
         <li>
        <Link to="/Ejercicio13">Ejercicio13</Link>
+        </li>
+        <li>
+       <Link to="/Ejercicio14">Ejercicio14</Link>
+        </li>
+        <li>
+       <Link to="/Ejercicio15">Ejercicio15</Link>
+        </li>
+        <li>
+       <Link to="/Ejercicio16">Ejercicio16</Link>
         </li>
         </ul>
         </nav>
