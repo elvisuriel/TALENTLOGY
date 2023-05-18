@@ -77,7 +77,7 @@ body { background-color: rgb(107, 193, 246); }
     font-size: 18px;
     margin-top: 20px;
   }
-  ul{
+   li{
     display: flex;
     flex-wrap: wrap;
     list-style: none;

@@ -14,8 +14,13 @@ import Ejercicio13 from './ejercicios/ejercicio13/pages/Ejercicio13'
 import Ejercicio14 from './ejercicios/ejercicio14/pages/Ejercicio14'
 import Ejercicio15 from './ejercicios/ejercicio15/pages/Ejercicio15'
 import Ejercicio16 from './ejercicios/ejercicio16/pages/Ejercicio16'
+import Ejercicio17 from './ejercicios/ejercicio17/pages/Ejercicio17'
+import Ejercicio18 from './ejercicios/ejercicio18/pages/Ejercicio18'
+import Ejercicio19 from './ejercicios/ejercicio19/pages/Ejercicio19'
 import './index.css'
 import './carrito.css'
+import './tares.css'
+import './Photo.css'
 import { BrowserRouter, Routes, Route,Link } from 'react-router-dom'
 import Slider from "react-slick";
 
@@ -43,14 +48,17 @@ const App = () => {
               <Route path='/Ejercicio14' element={<Ejercicio14/>}/>
               <Route path='/Ejercicio15' element={<Ejercicio15/>}/>
               <Route path='/Ejercicio16' element={<Ejercicio16/>}/>
+              <Route path='/Ejercicio17' element={<Ejercicio17/>}/>
+              <Route path='/Ejercicio18' element={<Ejercicio18/>}/>
+              <Route path='/Ejercicio19' element={<Ejercicio19/>}/>
             </Routes>
            </div>
  )
 }
 
 function Navigation(){
-    return <nav>
-        <ul className='menu'>
+    return <nav >
+        <ul>
         <li>
        <Link to="/Ejercicio1">Ejercicio1</Link>
         </li>
@@ -98,6 +106,15 @@ function Navigation(){
         </li>
         <li>
        <Link to="/Ejercicio16">Ejercicio16</Link>
+        </li>
+        <li>
+       <Link to="/Ejercicio17">Ejercicio17</Link>
+        </li>
+        <li>
+       <Link to="/Ejercicio18">Ejercicio18</Link>
+        </li> 
+        <li>
+       <Link to="/Ejercicio19">Ejercicio19</Link>
         </li>
         </ul>
         </nav>
