@@ -1,9 +1,9 @@
-
+import RestaurantDetails from "../components/RestaurantDetails";
 
 const Ejercicio20 = () => {
     return (
         <div>
-            <h1>hola</h1>
+            <RestaurantDetails/>
         </div>
     );
 };
