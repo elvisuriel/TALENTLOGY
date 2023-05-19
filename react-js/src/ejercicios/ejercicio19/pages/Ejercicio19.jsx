@@ -12,10 +12,14 @@ import {
 } from "reactstrap";
 
 const data = [
-  { id: 1, nombre: "Carlos", correo: "Carlos@gmail.com" },
-  { id: 2, nombre: "oscar", correo: "Drafrt@gmail.com" },
-  { id: 3, nombre: "Elvis", correo: "RurouniKenshin@gmil.com" },
-  { id: 4, nombre: "Jose", correo: "OnePiece@gmail.com" },
+  { id: 1, nombre: "Carlos", correo: "Carlos@gmail.com", 
+  image: "Insertar foto",comment:"Ingeniero",},
+  { id: 2, nombre: "oscar", correo: "Drafrt@gmail.com", 
+  image: "",comment:"",},
+  { id: 3, nombre: "Elvis", correo: "RurouniKenshin@gmil.com",
+  image: "",comment:"",},
+  { id: 4, nombre: "Jose", correo: "OnePiece@gmail.com", 
+  image: "",comment:"",},
   
 ];
 
@@ -28,6 +32,8 @@ class App extends React.Component {
       id: "",
       nombre: "",
       correo: "",
+      image: "",
+      comment:"",
     },
   };
 
@@ -59,6 +65,9 @@ class App extends React.Component {
       if (dato.id == registro.id) {
         arreglo[contador].nombre = dato.nombre;
         arreglo[contador].correo = dato.correo;
+        arreglo[contador].image = dato.image;
+        arreglo[contador].comment = dato.comment;
+        
       }
       contador++;
     });
@@ -112,6 +121,8 @@ class App extends React.Component {
                 <th>ID</th>
                 <th>nombre</th>
                 <th>correo</th>
+                <th>image</th>
+                <th>comment</th>
                 <th>Acción</th>
               </tr>
             </thead>
@@ -122,6 +133,8 @@ class App extends React.Component {
                   <td>{dato.id}</td>
                   <td>{dato.nombre}</td>
                   <td>{dato.correo}</td>
+                  <td>{dato.image}</td>
+                  <td>{dato.comment}</td>
                   <td>
                     <Button
                       color="primary"
@@ -181,6 +194,32 @@ class App extends React.Component {
                 value={this.state.form.correo}
               />
             </FormGroup>
+
+            <FormGroup>
+              <label>
+                Image: 
+              </label>
+              <input
+                className="form-control"
+                name="image"
+                type="text"
+                onChange={this.handleChange}
+                value={this.state.form.image}
+              />
+            </FormGroup>
+            <FormGroup>
+              <label>
+                Comment: 
+              </label>
+              <input
+                className="form-control"
+                name="comment"
+                type="text"
+                onChange={this.handleChange}
+                value={this.state.form.comment}
+              />
+            </FormGroup>
+
           </ModalBody>
 
           <ModalFooter>
@@ -239,6 +278,28 @@ class App extends React.Component {
               <input
                 className="form-control"
                 name="correo"
+                type="text"
+                onChange={this.handleChange}
+              />
+            </FormGroup>
+            <FormGroup>
+              <label>
+                Image: 
+              </label>
+              <input
+                className="form-control"
+                name="image"
+                type="text"
+                onChange={this.handleChange}
+              />
+            </FormGroup>
+            <FormGroup>
+              <label>
+                Comment: 
+              </label>
+              <input
+                className="form-control"
+                name="comment"
                 type="text"
                 onChange={this.handleChange}
               />
