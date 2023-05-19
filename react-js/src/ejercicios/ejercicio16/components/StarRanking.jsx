@@ -15,7 +15,7 @@ const RatingStars = ({ rating, onChange }) => {
       {[...Array(5)].map((_, index) => {
         const starValue = index + 1;
         return (
-          <label key={index}>
+          <label key={index} className="rating-star">
             <input
               type="radio"
               name="rating"
@@ -25,7 +25,11 @@ const RatingStars = ({ rating, onChange }) => {
             <FaStar
               className="star"
               size={24}
-              color={(starValue <= rating || starValue <= hoverRating) ? "#ffc107" : "#e4e5e9"}
+              color={
+                starValue <= rating || starValue <= hoverRating
+                  ? "#ffc107"
+                  : "#e4e5e9"
+              }
               onMouseEnter={() => setHoverRating(starValue)}
               onMouseLeave={() => setHoverRating(0)}
             />

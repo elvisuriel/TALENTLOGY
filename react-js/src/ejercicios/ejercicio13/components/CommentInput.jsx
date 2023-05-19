@@ -5,9 +5,9 @@ function CommentInput({ onAddComment }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (comment.trim() === "") return; // si el comentario está vacío, no hacemos nada
-    onAddComment(comment); // llamamos a la función de callback para agregar el comentario
-    setComment(""); // reseteamos el estado del input
+    if (comment.trim() === "") return;
+    onAddComment(comment);
+    setComment("");
   };
 
   const handleChange = (event) => {
@@ -16,13 +16,20 @@ function CommentInput({ onAddComment }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <textarea
-        placeholder="Ingresa un comentario"
-        value={comment}
-        onChange={handleChange}
-      />
-      <button type="submit">Agregar comentario</button>
+      <div className="mb-3">
+        <textarea
+          className="form-control"
+          rows="3"
+          placeholder="Ingresa un comentario"
+          value={comment}
+          onChange={handleChange}
+        />
+      </div>
+      <button type="submit" className="btn btn-primary">
+        Agregar comentario
+      </button>
     </form>
   );
 }
+
 export default CommentInput;

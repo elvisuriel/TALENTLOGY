@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Button, Container, FormGroup, Label, Input } from "reactstrap";
+
 
 const Ejercicio7 = () => {
   const [date, setDate] = useState(""); // Estado para almacenar la fecha ingresada por el usuario
@@ -27,17 +29,26 @@ const Ejercicio7 = () => {
   };
 
   return (
-    <div className="ejercicio7-container">
-      <h2>Calculadora de días restantes</h2>
-      <label>
-        Ingrese una fecha:
-        <input type="date" value={date} onChange={handleDateChange} />
-      </label>
-      <button onClick={handleCalculate}>Calcular</button>
-      {daysLeft !== null && (
-        <p>Faltan {daysLeft} días para la fecha ingresada.</p>
-      )}
-    </div>
+    <Container>
+      <div className="ejercicio7-container">
+        <h2>Calculadora de días restantes</h2>
+        <FormGroup>
+          <Label for="dateInput">Ingrese una fecha:</Label>
+          <Input
+            type="date"
+            id="dateInput"
+            value={date}
+            onChange={handleDateChange}
+          />
+        </FormGroup>
+        <Button color="primary" onClick={handleCalculate}>
+          Calcular
+        </Button>
+        {daysLeft !== null && (
+          <p>Faltan {daysLeft} días para la fecha ingresada.</p>
+        )}
+      </div>
+    </Container>
   );
 };
 

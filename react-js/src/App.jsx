@@ -17,10 +17,12 @@ import Ejercicio16 from './ejercicios/ejercicio16/pages/Ejercicio16'
 import Ejercicio17 from './ejercicios/ejercicio17/pages/Ejercicio17'
 import Ejercicio18 from './ejercicios/ejercicio18/pages/Ejercicio18'
 import Ejercicio19 from './ejercicios/ejercicio19/pages/Ejercicio19'
+import Ejercicio20 from './ejercicios/ejercicio20/pages/Ejercicio20'
 import './index.css'
 import './carrito.css'
 import './tares.css'
 import './Photo.css'
+
 import { BrowserRouter, Routes, Route,Link } from 'react-router-dom'
 import Slider from "react-slick";
 
@@ -51,6 +53,7 @@ const App = () => {
               <Route path='/Ejercicio17' element={<Ejercicio17/>}/>
               <Route path='/Ejercicio18' element={<Ejercicio18/>}/>
               <Route path='/Ejercicio19' element={<Ejercicio19/>}/>
+              <Route path='/Ejercicio20' element={<Ejercicio20/>}/>
             </Routes>
            </div>
  )
@@ -115,6 +118,9 @@ function Navigation(){
         </li> 
         <li>
        <Link to="/Ejercicio19">Ejercicio19</Link>
+        </li>
+        <li>
+       <Link to="/Ejercicio20">Ejercicio20</Link>
         </li>
         </ul>
         </nav>

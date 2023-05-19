@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { movies } from "./Data";
-import ReactStars from "react-rating-stars-component";
+
+
+
 
 const MoviesDetails = () => {
   const [searchKey, setSearchKey] = useState("");
@@ -23,13 +25,18 @@ const MoviesDetails = () => {
       <h2 className="text-center mt-5 mb-5">MOVIES</h2>
 
       <form className="container mb-4" onSubmit={searchMovies}>
-        <input
-          type="text"
-          placeholder="Search"
-          value={searchKey}
-          onChange={(e) => setSearchKey(e.target.value)}
-        />
-        <button type="submit">Search</button>
+        <div className="input-group">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Search"
+            value={searchKey}
+            onChange={(e) => setSearchKey(e.target.value)}
+          />
+          <button type="submit" className="btn btn-primary">
+            Search
+          </button>
+        </div>
       </form>
 
       <div className="container mt-3">
@@ -39,8 +46,7 @@ const MoviesDetails = () => {
               <img
                 src={movie.image}
                 alt={movie.title}
-                height={600}
-                width="100%"
+                className="img-fluid"
               />
               <h2>Título: {movie.title}</h2>
               <h2>Descripción: {movie.description}</h2>

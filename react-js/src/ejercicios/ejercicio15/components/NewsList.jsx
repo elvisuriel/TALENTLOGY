@@ -22,6 +22,8 @@ const NewsList = () => {
       } else if (filterOption === "title") {
         return user.titulo.toLowerCase().includes(value);
       }
+
+      return false;
     });
 
     setFilteredNews(filteredNews);
@@ -37,27 +39,32 @@ const NewsList = () => {
 
   return (
     <div>
-      <h1>NOTICIAS</h1>
-      <div className="search-container">
+      <h1 className="mt-5">NOTICIAS</h1>
+      <div className="search-container mt-4">
         <input
           value={search}
           onChange={handleSearch}
           type="text"
+          className="form-control"
           placeholder="Search"
         />
-        <select value={filterOption} onChange={handleFilterChange}>
+        <select
+          value={filterOption}
+          onChange={handleFilterChange}
+          className="form-select mt-3"
+        >
           <option value="category">Categoría</option>
           <option value="date">Fecha</option>
           <option value="title">Título</option>
         </select>
       </div>
 
-      <table className="my-table">
+      <table className="table mt-4">
         <thead>
           <tr>
-            <th>Categoría</th>
-            <th>Noticia</th>
-            <th>Fecha</th>
+            <th scope="col">Categoría</th>
+            <th scope="col">Noticia</th>
+            <th scope="col">Fecha</th>
           </tr>
         </thead>
         <tbody>
