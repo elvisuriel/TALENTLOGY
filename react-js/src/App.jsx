@@ -63,64 +63,64 @@ function Navigation(){
     return <nav >
         <ul>
         <li>
-       <Link to="/Ejercicio1">Ejercicio1</Link>
+       <Link to="/Ejercicio1">Ejercicio-01</Link>
         </li>
         <li>
-       <Link to="/Ejercicio2">Ejercicio2</Link>
+       <Link to="/Ejercicio2">Ejercicio-02</Link>
         </li>
         <li>
-       <Link to="/Ejercicio3">Ejercicio3</Link>
+       <Link to="/Ejercicio3">Ejercicio-03</Link>
         </li>
         <li>
-       <Link to="/Ejercicio4">Ejercicio4</Link>
+       <Link to="/Ejercicio4">Ejercicio-04</Link>
         </li>
         <li>
-       <Link to="/Ejercicio5">Ejercicio5</Link>
+       <Link to="/Ejercicio5">Ejercicio-05</Link>
         </li>
         <li>
-       <Link to="/Ejercicio6">Ejercicio6</Link>
+       <Link to="/Ejercicio6">Ejercicio-06</Link>
         </li>
         <li>
-       <Link to="/Ejercicio7">Ejercicio7</Link>
+       <Link to="/Ejercicio7">Ejercicio-07</Link>
         </li>
         <li>
-       <Link to="/Ejercicio8">Ejercicio8</Link>
+       <Link to="/Ejercicio8">Ejercicio-08</Link>
         </li>
         <li>
-       <Link to="/Ejercicio9">Ejercicio9</Link>
+       <Link to="/Ejercicio9">Ejercicio-09</Link>
         </li>
         <li>
-       <Link to="/Ejercicio10">Ejercicio10</Link> 
+       <Link to="/Ejercicio10">Ejercicio-10</Link> 
         </li>
         <li>
-       <Link to="/Ejercicio11">Ejercicio11</Link>
+       <Link to="/Ejercicio11">Ejercicio-11</Link>
         </li>
         <li>
        <Link to="/Ejercicio12">Ejercicio12</Link>
         </li>
         <li>
-       <Link to="/Ejercicio13">Ejercicio13</Link>
+       <Link to="/Ejercicio13">Ejercicio-13</Link>
         </li>
         <li>
-       <Link to="/Ejercicio14">Ejercicio14</Link>
+       <Link to="/Ejercicio14">Ejercicio-14</Link>
         </li>
         <li>
-       <Link to="/Ejercicio15">Ejercicio15</Link>
+       <Link to="/Ejercicio15">Ejercicio-15</Link>
         </li>
         <li>
-       <Link to="/Ejercicio16">Ejercicio16</Link>
+       <Link to="/Ejercicio16">Ejercicio-16</Link>
         </li>
         <li>
-       <Link to="/Ejercicio17">Ejercicio17</Link>
+       <Link to="/Ejercicio17">Ejercicio-17</Link>
         </li>
         <li>
-       <Link to="/Ejercicio18">Ejercicio18</Link>
+       <Link to="/Ejercicio18">Ejercicio-18</Link>
         </li> 
         <li>
-       <Link to="/Ejercicio19">Ejercicio19</Link>
+       <Link to="/Ejercicio19">Ejercicio-19</Link>
         </li>
         <li>
-       <Link to="/Ejercicio20">Ejercicio20</Link>
+       <Link to="/Ejercicio20">Ejercicio-20</Link>
         </li>
         </ul>
         </nav>

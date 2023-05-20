@@ -2,7 +2,7 @@ export const restaurants = [
     {
       id:1,  
       nombre: "El Carnalito",
-      image: "https://tacoselcarnalito.com/wp-content/uploads/2023/02/Menu-Web-1.jpg",
+      image: "https://i.ytimg.com/vi/dOGIAGnxVL8/maxresdefault.jpg",
       comidaTipica: "Tacos al Pastor",
       direccion: "www.elcarnalito.com",
       ubicacion: "Ciudad de México, México"
