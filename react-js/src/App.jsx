@@ -18,6 +18,9 @@ import Ejercicio17 from './ejercicios/ejercicio17/pages/Ejercicio17'
 import Ejercicio18 from './ejercicios/ejercicio18/pages/Ejercicio18'
 import Ejercicio19 from './ejercicios/ejercicio19/pages/Ejercicio19'
 import Ejercicio20 from './ejercicios/ejercicio20/pages/Ejercicio20'
+import Ejercicio21 from './ejercicios/ejercicio21/pages/Ejercicio21'
+import Ejercicio22 from './ejercicios/ejercicio22/pages/Ejercicio22.jsx'
+
 import './index.css'
 import './carrito.css'
 import './tares.css'
@@ -54,6 +57,8 @@ const App = () => {
               <Route path='/Ejercicio18' element={<Ejercicio18/>}/>
               <Route path='/Ejercicio19' element={<Ejercicio19/>}/>
               <Route path='/Ejercicio20' element={<Ejercicio20/>}/>
+              <Route path='/Ejercicio21' element={<Ejercicio21/>}/>
+              <Route path='/Ejercicio22' element={<Ejercicio22/>}/>
             </Routes>
            </div>
  )
@@ -121,6 +126,12 @@ function Navigation(){
         </li>
         <li>
        <Link to="/Ejercicio20">Ejercicio-20</Link>
+        </li>
+        <li>
+       <Link to="/Ejercicio21">Ejercicio-21</Link>
+        </li>
+        <li>
+       <Link to="/Ejercicio22">Ejercicio-22</Link>
         </li>
         </ul>
         </nav>

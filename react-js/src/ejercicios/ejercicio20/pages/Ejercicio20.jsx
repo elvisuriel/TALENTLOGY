@@ -4,6 +4,7 @@ const Ejercicio20 = () => {
     return (
         <div>
             <RestaurantDetails/>
+
         </div>
     );
 };
