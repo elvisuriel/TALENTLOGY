@@ -1,0 +1,116 @@
+.image_editor {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e1e6ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image_editor .card {
+  padding: 28px;
+  width: 700px;
+  height: 80%;
+  background-color: #fff;
+  box-shadow: 0 8px 16px 0px rgb(201, 201, 201);
+}
+
+.image_editor .card .card_header {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.image_editor .card .card_header h2 {
+  text-transform: uppercase;
+  color: #280fba;
+}
+
+.image_editor .card .card_body {
+  display: flex;
+  justify-content: center;
+}
+
+.image_editor .card .card_body .sidebar {
+  display: flex;
+  flex-direction: column;
+  margin-right: 8px;
+}
+
+.image_editor .card .card_body .sidebar .reset {
+  margin-top: 20px;
+}
+
+.image_editor .card .card_body .sidebar .reset .save {
+  background-color: #35a1f3 !important;
+  margin-left: 5px;
+}
+
+.image_editor .card .card_body .sidebar button {
+  background-color: rgb(91, 242, 53);
+  padding: 8px;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #dad7d7;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 15px;
+}
+
+.image_editor .card .card_body .sidebar span {
+  font-size: 15px;
+  color: #404040;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.image_editor .card .card_body .sidebar .side_body {
+  width: 250px;
+  border: 1px solid #c3c5c4;
+  height: 300px;
+  padding: 10px;
+}
+
+.image_editor .card .card_body .sidebar .side_body .filter_key {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8px;
+}
+
+.image_editor .card .card_body .sidebar .side_body .filter_key button.active {
+  background-color: rgb(18, 30, 200);
+  color: #fff;
+}
+
+.image_editor .card .card_body .sidebar .side_body .filter_key button {
+  padding: 8px;
+  background-repeat: 3px;
+  border: 1px solid #dad7d7;
+  cursor: pointer;
+  color: #404040;
+  text-transform: capitalize;
+}
+
+.image_editor .card .card_body .sidebar .side_body .filter_slider {
+  margin: 15px 0px;
+}
+
+.image_editor .card .card_body .sidebar .side_body .filter_slider .label_bar {
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.image_editor .card .card_body .sidebar .side_body .filter_slider .label_bar label,
+.image_editor .card .card_body .sidebar .side_body .filter_slider .label_bar span {
+  color: #404040;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.image_editor .card .card_body .sidebar .side_body .filter_slider input {
+  width: 100%;
+}
+
+.image_editor .card .card_body .sidebar .side
